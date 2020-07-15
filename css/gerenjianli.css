@@ -1,0 +1,504 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+body {
+	background-color: #f5f5f5;
+	position: relative;
+}
+
+@font-face {
+	font-family: Masf;
+	src: url("../font/默陌老屋手迹.ttf");
+}
+
+.font {
+	font-family: Masf;
+	font-size: 50px;
+	color: #fff;
+	float: left;
+	height: 60px;
+	padding: 15px 15px;
+	line-height: 20px;
+}
+
+
+.font:hover {
+	color: #fff;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+	font-size: 15px;
+}
+
+
+
+.body {
+	margin-top: 70px;
+	height: 555px;
+}
+
+.container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+body {
+	position: relative;
+}
+
+.navbar {
+	background: rgba(255, 0, 0, 0);
+	border: 0;
+	padding-top: 15px;
+}
+
+.navigationBar {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	transition: all 1s;
+	top: 0;
+	z-index: 999;
+}
+
+.bennet {
+	height: 800px;
+	background: url(../img/jp2png.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 关于我 */
+.AboutMe {
+	width: 100%;
+	height: 500px;
+	background-color: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.information {
+	height: 85%;
+	float: left;
+	margin: 38px 0;
+	position: relative;
+}
+
+.introduce {
+	height: 85%;
+	float: right;
+	margin: 38px 0;
+}
+
+
+.detailed {
+	width: 100%;
+	height: 45%;
+}
+
+.headPortrait {
+	width: 50%;
+	height: 100%;
+	float: left;
+	background: url(../img/qyc.jpg) no-repeat;
+	background-size: 80% 100%;
+	background-position: 50% 0;
+	border-radius: 40px;
+	overflow: hidden;
+}
+
+.xinx {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+.xinx>p {
+	height: 40px;
+	line-height: 40px;
+}
+
+
+.jiach {
+	font-weight: bold;
+	font-size: 17px;
+
+}
+
+.yans {
+	color: #666;
+}
+
+.skill {
+	width: 95%;
+	height: 45%;
+	margin-top: 35px;
+	position: absolute;
+	right: 0;
+}
+
+.fenzhang {
+	width: 100%;
+	height: 55px;
+}
+
+.zhanf {
+	width: 100%;
+	height: 20px;
+	position: relative;
+}
+
+.ziti {
+	font-size: 15px;
+}
+
+.baifenb {
+	position: absolute;
+	right: 0;
+	font-size: 15px;
+}
+
+.nengliangt {
+	width: 100%;
+	height: 12px;
+	background-color: blue;
+}
+
+.bians {
+	width: 85%;
+	height: 12px;
+	background-color: bisque;
+}
+
+.bians1 {
+	width: 90%;
+	height: 12px;
+	background-color: bisque;
+}
+
+.bians2 {
+	width: 75%;
+	height: 12px;
+	background-color: bisque;
+}
+
+.Detailed {
+	width: 100%;
+	height: 50px;
+}
+
+.Detailed>h5 {
+	margin-top: 0;
+}
+
+.hDet {
+	font-size: 30px;
+}
+
+.writtenWords {
+	width: 100%;
+	height: 350px;
+	margin-top: 20px;
+}
+
+.writtenWords>p {
+	margin-top: 30px;
+	font-size: 17px;
+	color: #666;
+}
+
+/* 分隔 */
+.jg {
+	width: 100%;
+	height: 400px;
+	background-color: red;
+	opacity: .7;
+	background: url(../img/jg.jpg) no-repeat;
+	position: relative;
+}
+
+.guding {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+.gu_li {
+	height: 60%;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 18%;
+}
+
+.yichang {
+	height: 100%;
+	overflow: hidden;
+}
+
+.yichang>div {
+	position: relative;
+	height: 100%;
+}
+
+.yuan {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	border-radius: 100%;
+	border: 10px solid #ccc;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.yuan>img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.wenzz {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top: 130px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+}
+
+.wenzz>p {
+	font-size: 20px;
+	color: #fff;
+
+}
+
+/* 作品集 */
+.fenl {
+	margin-top: 50px;
+}
+
+.sampleReels {
+	height: 120px;
+	position: relative;
+}
+
+.sam_text {
+	height: 100%;
+	text-align: center;
+}
+
+.biaot {
+	font-size: 40px;
+}
+
+.fubiaot {
+	font-size: 20px;
+	color: #ccc;
+}
+
+.xiahux {
+	width: 40px;
+	height: 5px;
+	background-color: #0078ff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.samfenlei {
+	height: 800px;
+	margin-top: 55px;
+}
+
+.sampaixu {
+	height: 400px;
+	position: relative;
+}
+
+.sam_zuopin {
+	width: 90%;
+	height: 85%;
+	position: absolute;
+	top: 0;
+	background-color: #fff;
+	box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.sam_zuopin:hover>div {
+	background-size: 120% 120%;
+	transition: all 2s;
+	cursor: pointer;
+}
+
+.sam_img {
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+}
+
+.sam_img1 {
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	background: url(../img/1.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+
+
+.sam_img2 {
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	background: url(../img/2.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+
+.sam_img3 {
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	background: url(../img/3.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+
+.sam_img4 {
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	background: url(../img/4.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+
+.sam_img5 {
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	background: url(../img/5.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+
+.sam_img6 {
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
+	background: url(../img/6.jpg) no-repeat;
+	background-size: 100% 100%;
+	transition: all 2s;
+}
+
+.sam_textmiaos {
+	width: 100%;
+	height: 25%;
+	margin-left: 0;
+	margin-right: 0;
+	position: absolute;
+	bottom: 0;
+	background-color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #5a5353;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.sam_textmiaos_ms {
+	height: 80%;
+	float: left;
+}
+
+.bt {
+	font-size: 25px;
+}
+
+.jianju {
+	font-size: 17px;
+
+}
+
+.biase {
+	color: #0078FF;
+}
+
+.jiahao {
+	height: 80%;
+	float: right;
+	position: relative;
+}
+
+.jiahao>img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	right: 20px;
+}
+
+/* 版权 */
+.copyright{
+	width: 100%;
+	height: 150px;
+}
+
+
+.aa{
+	height: 80%;
+	margin-top: 30px;
+	text-align: center;
+	line-height: 150px;
+	font-size: 20px;
+	font-family: 楷体;
+}
+
+.banq{
+	font-family: Masf;
+}
+
+
+@media (max-width:1200px) {
+	.introduce {
+		display: none;
+	}
+
+	.information {
+		width: 100%;
+	}
+
+	.fenl {
+		height: 1500px;
+	}
+
+	.contact {
+		display: none;
+	}
+}
+
+
+@media (max-width:990px) {
+	.fenl {
+		height: 2700px;
+	}
+}
