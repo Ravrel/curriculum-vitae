@@ -470,10 +470,16 @@ a:hover {
 	font-size: 25px;
 }
 
+.bt a{
+	font-family: 楷体;
+}
+
 .jianju {
 	font-size: 17px;
+	font-family: 楷体;
 
 }
+
 
 .biase {
 	color: #0078FF;

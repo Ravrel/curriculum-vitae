@@ -41,4 +41,14 @@ $(function() {
 		$(".tupian").removeClass("huantupian1");
 		$(".tupian").removeClass("huantupian2");
 	})
+	
+	//点击作品集中的div跳转详情页
+	$(".sam_zuopin").click(function(){
+		if(confirm("确定查看网站详情页吗？")){
+			
+		}
+	})
+	
+	//点击导航栏li样式改变
+	
 })
