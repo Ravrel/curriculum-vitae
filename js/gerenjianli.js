@@ -41,5 +41,4 @@ $(function() {
 		$(".tupian").removeClass("huantupian1");
 		$(".tupian").removeClass("huantupian2");
 	})
-
 })
