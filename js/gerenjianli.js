@@ -50,5 +50,29 @@ $(function() {
 	})
 	
 	//点击导航栏li样式改变
+	$(".top_gyw").click(function(){
+		$(".top_gyw div").addClass("duoyu");
+		$(".top_sy div").removeClass("duoyu");
+		$(".top_zpj div").removeClass("duoyu");
+		$(".top_lxw div").removeClass("duoyu");
+	})
+	$(".top_zpj").click(function(){
+		$(".top_zpj div").addClass("duoyu");
+		$(".top_sy div").removeClass("duoyu");
+		$(".top_gyw div").removeClass("duoyu");
+		$(".top_lxw div").removeClass("duoyu");
+	})
 	
+	$(".top_lxw").click(function(){
+		$(".top_lxw div").addClass("duoyu");
+		$(".top_sy div").removeClass("duoyu");
+		$(".top_gyw div").removeClass("duoyu");
+		$(".top_zpj div").removeClass("duoyu");
+	})
+	$(".top_sy").click(function(){
+		$(".top_sy div").addClass("duoyu");
+		$(".top_lxw div").removeClass("duoyu");
+		$(".top_gyw div").removeClass("duoyu");
+		$(".top_zpj div").removeClass("duoyu");
+	})
 })
