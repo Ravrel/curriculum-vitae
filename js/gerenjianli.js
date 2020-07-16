@@ -1,18 +1,18 @@
 // 页面滚动导航栏变色
 
-$(function(){
-	$(document).scroll(function(){
+$(function() {
+	$(document).scroll(function() {
 		var scroG = $(document).scrollTop();
-		if(scroG >5){
-			$(".navigationBar").css("backgroundColor","#fff");
-			$(".font").css("color","#666");
-			$(".navbar-default .navbar-nav>li>a").css("color","#666");
-			$(".navigationBar").css("box-shadow","0 13px 8px -10px rgba(0, 0, 0, 0.1)");
-		}else{
-			$(".navigationBar").css("backgroundColor","rgba(0, 0, 0, 0.0)");
-			$(".font").css("color","#fff");
-			$(".navbar-default .navbar-nav>li>a").css("color","#fff");
-			$(".navigationBar").css("box-shadow","0 13px 8px -10px rgba(0, 0, 0, 0.0)");
+		if (scroG > 5) {
+			$(".navigationBar").css("backgroundColor", "#fff");
+			$(".font").css("color", "#666");
+			$(".navbar-default .navbar-nav>li>a").css("color", "#666");
+			$(".navigationBar").css("box-shadow", "0 13px 8px -10px rgba(0, 0, 0, 0.1)");
+		} else {
+			$(".navigationBar").css("backgroundColor", "rgba(0, 0, 0, 0.0)");
+			$(".font").css("color", "#fff");
+			$(".navbar-default .navbar-nav>li>a").css("color", "#fff");
+			$(".navigationBar").css("box-shadow", "0 13px 8px -10px rgba(0, 0, 0, 0.0)");
 		}
 	})
 	//锚点
@@ -23,8 +23,23 @@ $(function(){
 		}, 1000);
 	})
 	
-	// $(".sam_zuopin").click(function(){
-	// 	
-	// })
-})
+	// 点击出现二维码
+	$(".tub_img1").click(function(){
+		$(".tupian").addClass("huantupian1");
+		$(".tupian").removeClass("huantupian2");
+		$(".tupian").removeClass("huantupian3");
+	})
+	
+	$(".tub_img2").click(function(){
+		$(".tupian").addClass("huantupian2");
+		$(".tupian").removeClass("huantupian1");
+		$(".tupian").removeClass("huantupian3");
+	})
+	
+	$(".tub_img3").click(function(){
+		$(".tupian").addClass("huantupian3");
+		$(".tupian").removeClass("huantupian1");
+		$(".tupian").removeClass("huantupian2");
+	})
 
+})

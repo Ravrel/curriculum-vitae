@@ -50,7 +50,7 @@ body {
 body {
 	position: relative;
 }
-
+/* 头部导航栏 */
 .navbar {
 	background: rgba(255, 0, 0, 0);
 	border: 0;
@@ -66,10 +66,51 @@ body {
 	z-index: 999;
 }
 
+.navbar-right{
+	position: relative;
+}
+
+.gdxhx{
+	width: 40px;
+    height: 2px;
+    background-color: blue;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    margin: 0 auto;
+	opacity: 0;
+	transition: all .5s;
+}
+
+.duoyu{
+	width: 40px;
+	height: 2px;
+	background-color: blue;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	opacity: 1;
+	transition: all 1s;
+}
+
+.navbar-right>li:hover .gdxhx{
+	opacity: 1;
+	left: 0;
+	right: 0;
+	transition: all .5s;
+	color: #666;
+}
+
 .bennet {
 	height: 800px;
 	background: url(../img/jp2png.png) no-repeat;
 	background-size: 100% 100%;
+	text-align: center;
+	line-height: 800px;
+	font-size: 40px;
+	color: #cbbebe;
 }
 
 /* 关于我 */
@@ -341,7 +382,7 @@ body {
 
 .sam_zuopin:hover>div {
 	background-size: 120% 120%;
-	transition: all 2s;
+	transition: all 1.5s;
 	cursor: pointer;
 }
 
@@ -355,9 +396,9 @@ body {
 	width: 100%;
 	height: 70%;
 	overflow: hidden;
-	background: url(../img/1.jpg) no-repeat;
+	background: url(../img/gsyh.jpg) no-repeat;
 	background-size: 100% 100%;
-	transition: all 2s;
+	transition: all 1.5s;
 }
 
 
@@ -365,45 +406,45 @@ body {
 	width: 100%;
 	height: 70%;
 	overflow: hidden;
-	background: url(../img/2.jpg) no-repeat;
+	background: url(../img/ku.jpg) no-repeat;
 	background-size: 100% 100%;
-	transition: all 2s;
+	transition: all 1.5s;
 }
 
 .sam_img3 {
 	width: 100%;
 	height: 70%;
 	overflow: hidden;
-	background: url(../img/3.jpg) no-repeat;
+	background: url(../img/shiqi.jpg) no-repeat;
 	background-size: 100% 100%;
-	transition: all 2s;
+	transition: all 1.5s;
 }
 
 .sam_img4 {
 	width: 100%;
 	height: 70%;
 	overflow: hidden;
-	background: url(../img/4.jpg) no-repeat;
+	background: url(../img/gxdx.jpg) no-repeat;
 	background-size: 100% 100%;
-	transition: all 2s;
+	transition: all 1.5s;
 }
 
 .sam_img5 {
 	width: 100%;
 	height: 70%;
 	overflow: hidden;
-	background: url(../img/5.jpg) no-repeat;
+	background: url(../img/jingdong.jpg) no-repeat;
 	background-size: 100% 100%;
-	transition: all 2s;
+	transition: all 1.5s;
 }
 
 .sam_img6 {
 	width: 100%;
 	height: 70%;
 	overflow: hidden;
-	background: url(../img/6.jpg) no-repeat;
+	background: url(../img/xiecheng.jpg) no-repeat;
 	background-size: 100% 100%;
-	transition: all 2s;
+	transition: all 1.5s;
 }
 
 .sam_textmiaos {
@@ -458,13 +499,13 @@ a:hover {
 }
 
 /* 版权 */
-.copyright{
+.copyright {
 	width: 100%;
 	height: 150px;
 }
 
 
-.aa{
+.aa {
 	height: 80%;
 	margin-top: 30px;
 	text-align: center;
@@ -473,10 +514,102 @@ a:hover {
 	font-family: 楷体;
 }
 
-.banq{
+.banq {
 	font-family: Masf;
 }
 
+/* 联系我 */
+.ContactMe {
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.tub {
+	margin: 0 auto;
+}
+
+.sigtub {
+	height: 100%;
+	float: left;
+	margin-top: 20px;
+	text-align: right;
+}
+
+.tub_text {
+	height: 100%;
+	float: right;
+	text-align: left;
+}
+
+.tub_text li {
+	margin-top: 30px;
+}
+
+
+.tub ul {
+	list-style: none;
+}
+
+.sigtub li {
+	margin-top: 13px;
+}
+
+/* 点击出qq二维码 */
+
+.tupian {
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 600px;
+	margin: 0 auto;
+	opacity: 0;
+}
+
+.huantupian1{
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	bottom: 600px;
+	margin: 0 auto;
+	background: url(../img/qqe.jpg) no-repeat;
+	opacity: 1;
+	transition: all 2s;
+}
+
+.huantupian2{
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	bottom: 600px;
+	margin: 0 auto;
+	background: url(../img/wxe.png) no-repeat;
+	opacity: 1;
+	transition: all 2s;
+}
+
+.huantupian3{
+	width: 400px;
+	height: 400px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	bottom: 600px;
+	margin: 0 auto;
+	background: url(../img/wbe.jpg) no-repeat;
+	opacity: 1;
+	transition: all 2s;
+}
 
 @media (max-width:1200px) {
 	.introduce {
@@ -488,7 +621,7 @@ a:hover {
 	}
 
 	.fenl {
-		height: 1500px;
+		height: 1440px;
 	}
 
 	.contact {
@@ -501,4 +634,29 @@ a:hover {
 	.fenl {
 		height: 2700px;
 	}
+}
+
+
+@media (max-width:530px) {
+	.jiach {
+		font-size: 12px;
+	}
+
+	.yans {
+		font-size: 8px;
+	}
+
+	.headPortrait {
+		width: 40%;
+		height: 80%;
+	}
+
+	.xinx {
+		width: 57%;
+	}
+
+	.fenl {
+		height: 2580px;
+	}
+
 }
