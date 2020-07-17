@@ -575,9 +575,9 @@ a:hover {
 	height: 400px;
 	position: fixed;
 	left: 0;
-	right: 0;
+	right: 728px;
 	z-index: 999;
-	bottom: 600px;
+	bottom: 158px;
 	margin: 0 auto;
 	background: url(../img/qqe.jpg) no-repeat;
 	opacity: 1;
@@ -589,9 +589,9 @@ a:hover {
 	height: 400px;
 	position: fixed;
 	left: 0;
-	right: 0;
+	right: 728px;
 	z-index: 999;
-	bottom: 600px;
+	bottom: 158px;
 	margin: 0 auto;
 	background: url(../img/wxe.png) no-repeat;
 	opacity: 1;
@@ -603,13 +603,25 @@ a:hover {
 	height: 400px;
 	position: fixed;
 	left: 0;
-	right: 0;
+	right: 728px;
 	z-index: 999;
-	bottom: 600px;
+	bottom: 158px;
 	margin: 0 auto;
 	background: url(../img/wbe.jpg) no-repeat;
 	opacity: 1;
 	transition: all 2s;
+}
+
+/* 回到顶部 */
+.BackTotheTop{
+	width: 60px;
+	height: 60px;
+	background-color: red;
+	position: fixed;
+	bottom: 20px;
+	right: 0;
+	background: url(../img/hddb.png) no-repeat;
+	opacity: 0;
 }
 
 @media (max-width:1200px) {

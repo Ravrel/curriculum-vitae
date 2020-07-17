@@ -44,8 +44,27 @@ $(function() {
 	
 	//点击作品集中的div跳转详情页
 	$(".sam_zuopin").click(function(){
+		var zpj_text=$(this).find("a").eq(0).text();
+		console.log(zpj_text);
 		if(confirm("确定查看网站详情页吗？")){
-			
+			if(zpj_text=="工商银行"){
+				window.location.href="project/gsyh/index.html";
+			}
+			if(zpj_text=="广西大学"){
+				window.location.href="project/gxdx/index.html";
+			}
+			if(zpj_text=="美食后台系统"){
+				window.location.href="project/hometown/login.html";
+			}
+			if(zpj_text=="酷狗首页"){
+				window.location.href="project/kugou/index.html";
+			}
+			if(zpj_text=="京东"){
+				window.location.href="project/jingdong/index.html";
+			}
+			if(zpj_text=="携程"){
+				window.location.href="project/xiecheng/index.html";
+			}
 		}
 	})
 	

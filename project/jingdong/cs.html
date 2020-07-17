@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul class="price-brand-right">
+			　　
+			　　　　<li class="li-brand" style="cursor:pointer;">@item.name<input type="hidden" value="@item.brandid"></li>
+			　　
+		</ul>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".li-brand").hover(function() {
+			var b = $(this).css("fontWeight");
+			if (b.indexOf("bold") != -1) {
+				return false;
+			}
+			$(this).css({
+				"color": "red",
+				"text-decoration": "underline"
+			});
+		}, function() {
+			var b = $(this).css("fontWeight");
+			if (b.indexOf("bold") != -1) {
+				return false;
+			}
+			$(this).css({
+				"color": "#666",
+				"text-decoration": "none"
+			});
+		});
+
+		//品牌点击
+		$(".li-brand").click(function() {
+			$(this).css({
+				"color": "green",
+				"fontWeight": "bold",
+				"text-decoration": "none"
+			});
+			$(this).prevAll("li").css({
+				"color": "#666",
+				"fontWeight": "normal"
+			});
+			$(this).nextAll("li").css({
+				"color": "#666",
+				"fontWeight": "normal"
+			});
+		});
+	</script>
+</html>

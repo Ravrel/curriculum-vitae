@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	</head>
+	<body>
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="exampleInputName2">商品名称</label>
+				<input type="text" class="form-control" id="goodsname">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail2">商品描述</label>
+				<input type="text" class="form-control" id="description">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail2">商品价格</label>
+				<input type="text" class="form-control" id="price1">
+				-
+				<input type="text" class="form-control" id="price2">
+			</div>
+			<button type="button" id="search" class="btn btn-info">搜索</button>
+			<!-- 修改点 -->
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAdd">
+				添加
+			</button>
+		</form>
+		<!-- 商品添加弹出层 -->
+		<!-- 修改点 -->
+		<div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">商品添加</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<table style="width:100%;">
+								<tr>
+									<td>
+										<div class="form-group">
+											<label for="inputEmail3" class="col-sm-2 control-label">商品名称</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="addnames">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-group">
+											<label for="inputPassword3" class="col-sm-2 control-label">商品价格</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="addprice">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-group">
+											<label for="inputEmail3" class="col-sm-2 control-label">商品数量</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="addquantity">
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-group">
+											<label for="inputEmail3" class="col-sm-2 control-label">商品描述</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="adddescription">
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" id="btn_sub" class="btn btn-primary">添加</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--商品修改弹出层-->
+		<!-- 修改点 -->
+		<div class="modal fade" id="myModalAlter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">商品修改</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group" style="display:none;">
+								<label for="inputEmail3" class="col-sm-2 control-label">商品id</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="alterid">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">商品名称</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="alternames">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword3" class="col-sm-2 control-label">商品价格</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="alterprice">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">商品数量</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="alterquantity">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">商品描述</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="alterdescription">
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<button type="button" id="btn_alt" class="btn btn-primary">修改</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<table class="table table-bordered">
+			<tr class="tt">
+				<th style="display: none;">商品ID</th>
+				<th>名称</th>
+				<th>价格</th>
+				<th>数量</th>
+				<th>描述</th>
+				<th>操作</th>
+			</tr>
+		</table>
+		<center>
+			<ul class="pagination"></ul>
+		</center>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/paging.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/goods.js" type="text/javascript" charset="utf-8"></script>
+</html>

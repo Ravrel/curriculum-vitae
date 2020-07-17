@@ -1,0 +1,293 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工商银行注册效果图</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript">
+			/* function check(){
+				//获取ID为fpwd文本框的对象
+				//var pwd = document.getElementById("fpwd");
+				//获取ID 为fpwd文本框对象的value值
+				var pwd = document.getElementById("fpwd").value;
+				if(pwd.length != 6){
+					alert("密码必须为6位");
+				}
+			} */
+		/* 	var flag_Name=false;
+			var flag_Password=false;
+			var flag_papers=false;
+			var flag_Phone=false;
+			function check(a){
+				if(a==1){
+					var name=document.getElementById("name").value;//昵称
+					var spa_1=document.getElementById("spa_1");
+					var reg_Name = /^[\u4E00-\u9FA5A-Za-z_0-9]{1,}$/;//昵称必须有中文,大小写英文,数字,下划线
+					 if(!reg_Name.test(name)){
+						spa_1.style.display="initial";
+						
+					}else {
+						flag_Name=true;
+						spa_1.style.display="none";
+						
+					}
+				} 
+				else if(a==2){
+					var pa=document.getElementById("password").value; //密码
+					var reg_Password = /^[A-Za-z]{1,}[0-9]{1,}[A-Za-z0-9]{0,}$/;//密码开头必须大写,后面要有大小写英文，数字
+					var spa_2=document.getElementById("spa_2");
+					if(pa.length < 8){
+						spa_2.style.display="initial";
+						
+					}else{
+						if(!reg_Password.test(pa)){
+							
+							spa_2.style.display="initial";
+						}else{
+							flag_Password=true;
+							spa_2.style.display="none";
+						}
+					}
+				}
+				else if(a==3){
+					var qr=document.getElementById("qrnm").value;//确认密码
+					var pa=document.getElementById("password").value;
+					var spa_3=document.getElementById("spa_3");
+					if(qr!=pa){
+						spa_3.style.display="initial";
+						
+					}else{
+						spa_3.style.display="none";
+						
+					}
+				}
+				 else if(a==4){
+					var papers=document.getElementById("papers").value;
+					var spa_4=document.getElementById("spa_4");
+					//var reg_Papers=/^([0-9]{15}$)|(^[0-9]{17}([0-9]|X))$/;//证件号码可以是15位数字或18位数字 最后一位可以是数字也可以是x(这个也可以)
+					var reg_Papers1=/^[0-9]{14}[0-9Xx]{1}$/;//身份证为15位最后一位可以是数字或者x
+					var reg_Papers2=/^[0-9]{17}[0-9Xx]{1}$/;//身份证为18位最后一位可以是数字或者x
+					if(!(reg_Papers1.test(papers)||reg_Papers2.test(papers))){
+						spa_4.style.display="initial";
+						
+					}else{
+						flag_papers=true;
+						spa_4.style.display="none";
+						
+					}
+				} 
+				else if(a==5){
+					var phone=document.getElementById("phone").value;//手机号码
+					var reg_Phone=/^1[0-9]{10}$/;//1开头,一共11位数字
+					var spa_5=document.getElementById("spa_5");
+					if(!reg_Phone.test(phone)){
+						spa_5.style.display="initial";
+						
+					}else{
+						flag_Phone=true;
+						spa_5.style.display="none";
+						
+					}
+				}else if(a==6){
+					var bxxz=document.getElementById("bxxz");//证件类型
+					var spa_6=document.getElementById("spa_6");
+					if(bxxz.value=="请选择"){
+						spa_6.style.display="initial";
+						
+					}else{
+						spa_6.style.display="none";
+						
+					}
+				}
+				else if(a==7){
+					var bxxz1=document.getElementById("bxxz1");//所在地
+					var spa_7=document.getElementById("spa_7");
+					if(bxxz1.value=="请选择"){
+						spa_7.style.display="initial";
+						
+					}else{
+						spa_7.style.display="none";
+						
+					}
+				}
+				if(flag_Name && flag_Password && flag_papers && flag_Phone){
+					btn.removeAttribute("disabled");
+				}
+			}	
+			 */
+			
+			var cityList= new Array();
+			cityList["广西"] = ["南宁","柳州","桂林"];
+			cityList["广东"] = ["深圳","广州","佛山"];
+			cityList["湖南"] = ["长沙","湘潭","怀化"];
+			cityList["湖北"] = ["黄冈","黄石","武汉"];
+			cityList["安徽"] = ["芜湖","安庆","合肥"];
+			
+			 window.onload  = function adPro(){//加载事件
+			var sel_pro=document.getElementById("sel_pro");
+				
+				for(var i in cityList){
+				
+					sel_pro.add(new Option (i,i),null);
+				}
+			}
+			
+			function changecity(){
+				var Pro=document.getElementById("sel_pro").value;
+				var sel_City=document.getElementById("sel_city");
+				sel_City.options.length=0;
+				for(i in cityList){
+					if(i == Pro){
+						for(var j in cityList[i]){
+							sel_City.add(new Option(cityList[i][j],cityList[i][j]),null);
+							
+						}	
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="div_1">
+			<div class="div_2">
+				<img src="images/icbc.png" />
+			</div>
+			<div class="div_2">
+				|注册
+			</div>
+			<div class="div_3">
+				<a href="shouye.html">
+					<br/><br/>
+					返回首页
+				</a>
+			</div>
+		</div>
+		<hr/>
+		<br/><br/>
+		<!-- onsubmit 当点击submit按钮的时候触发这个事件 -->
+		<form>
+			<table align="center">
+				<tr>
+					<td class="td_1">
+							昵称
+						</font>
+					</td>
+					<td>
+						<input type="text" id="name" onblur="check(1)" placeholder="请输入昵称" class="inp_1" />
+						<span style="color:red;font-size:13px;display: none;" id="spa_1">*请输入正确昵称</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_1">
+							密码
+						</font>
+					</td>
+					<td>
+						<input type="password"  id="password"  onblur="check(2)" placeholder="请输入6位数字密码" class="inp_1" />
+						<span style="color:red;font-size:13px;display: none;" id="spa_2">*请输入正确密码</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_1">
+							确认密码
+						</font>
+					</td>
+					<td>
+						<input type="password" id="qrnm" onblur="check(3)" placeholder="请确认密码" class="inp_1" />
+						<span style="color:red;font-size:13px;display: none;" id="spa_3">*密码不一致</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_1">
+							性别
+						</font>
+					</td>
+					<td>
+						<input type="radio" id="sex1" name="sex" checked="checked"/>男
+						<input type="radio" id="sex2" name="sex"/>女
+					</td>
+				</tr>
+				<tr>
+					<td class="td_1">
+							证件类型
+						</font>
+					</td>
+					<td>
+						<select class="slt_1" id="bxxz" onblur="check(6)">
+							<option >请选择</option>
+							<option>居民身份证</option>
+							<option>港、澳通行证</option>
+							<option>机动车驾驶证</option>
+						</select>
+						<span style="color:red;font-size:13px;display: none;" id="spa_6">*请输入正确的证件类型</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_1">
+							证件号码
+						</font>
+					</td>
+					<td>
+						<input type="text"  id="papers" onblur="check(4)" placeholder="请输入证件号码" class="inp_1" />
+						<span style="color:red;font-size:13px;display: none;" id="spa_4">*请输入正确的证件号码</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_1">
+							所在地
+						</font>
+					</td>
+					<td>
+						<select id="sel_pro" onchange="changecity()">
+							<option>请选择</option>
+						</select>
+						<select id="sel_city">
+							<option>请选择</option>
+						</select>
+						<span style="color:red;font-size:13px;display: none;" id="spa_7">*请选择所在地</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td_1">
+							手机号码
+						</font>
+					</td>
+					<td>
+						<input type="text" id="phone" onblur="check(5)" placeholder="请输入手机号码" class="inp_1" />
+						<span style="color:red;font-size:13px;display: none;" id="spa_5">*请输入正确的手机号码</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center" class="td_2">
+						可通过该手机号码快速找回密码
+						<br/>
+						&nbsp;&nbsp;中国大陆地区以外手机号码
+						<a href="子页面.html">
+							点击这里
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="立即注册" id="btn" name="zhuce" class="box" disabled="disabled"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="td_2">
+						<input type="checkbox" id="che"/>
+						我已阅读并同意相关服务条款和隐私政策
+					</td>
+				</tr>
+			</table>
+		</form>
+		<br/><br/><br/>
+		<hr/>
+		<p>
+			请与我们联系
+			<a href="#">
+				webmaster@icbc.com.cn
+			</a>
+			中国工商银行版权所有
+		</p>
+	</body>
+</html>

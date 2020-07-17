@@ -1,0 +1,74 @@
+
+table{
+	width: 500px;
+}
+
+ .span_name{
+
+	color: red;
+    font-size: 10px;
+    float: left;
+    margin-top: 12px;
+    display: none;
+}
+ 
+ .span_pwd{
+
+	color: red;
+    font-size: 10px;
+    float: left;
+    margin-top: 12px;
+    display: none;
+}
+
+ .span_phone{
+
+	color: red;
+    font-size: 10px;
+    float: left;
+    margin-top: 12px;
+    display: none;
+}
+
+ .span_carNo{
+
+	color: red;
+    font-size: 10px;
+    float: left;
+    margin-top: 12px;
+    display: none;
+}
+
+ .span_add{
+
+	color: red;
+    font-size: 10px;
+    float: left;
+    margin-top: 12px;
+    display: none;
+}
+
+
+
+ table{
+	margin: 0 auto;
+    margin-top: 180px;
+}
+
+tr{
+	height: 70px;
+}
+
+td{
+	width: 60px;
+}
+
+.form-control{
+	width: 200px;
+}
+
+#uname{
+	float: left;
+}
+
+    
