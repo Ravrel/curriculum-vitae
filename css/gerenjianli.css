@@ -114,6 +114,8 @@ body {
 	height: 500px;
 	background-color: #fff;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .information {
@@ -672,4 +674,11 @@ a:hover {
 		height: 2580px;
 	}
 
+}
+
+@media (max-width:375px) {
+	.bennet{
+		height: 400px;
+		line-height: 400px;
+	}
 }
